@@ -30,13 +30,14 @@ public class AuthenticationApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		System.out.println("first user ! ");
 		User u1=new User();
 		u1.setEmail("ssp9448");
 		u1.setFullname("sanjeev kumar");
 		u1.setPass(this.encoder.encode("12345"));
 		u1.setRole("ADMIN");
 		repositry.save(u1);
-		
+		System.out.println("Second user ! ");
 		User u2=new User();
 		u2.setEmail("rk9448");
 		u2.setFullname("Rajeev kumar");
